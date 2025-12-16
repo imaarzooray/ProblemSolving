@@ -63,8 +63,9 @@ class Camel : public Animal
 {
 };
 
-int main(int *argc, char *argv[])
+int main(int argc, char *argv[])
 {
 
+    cout<<"Hi, I am Pankaj.."<<endl;
     return 0;
 }
