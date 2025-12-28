@@ -9,6 +9,39 @@ int main(int argv, char *argc[])
     cin>>num1>>num2>>num3;
 
 
+    int greatest = 0;
+
+    if(num1>num2){
+        if(num2>num3){
+            greatest = num1;
+        }
+        else{
+            if(num3>num1)
+            {
+                greatest = num3;
+            }
+            else{
+                greatest =num1;
+            }
+        }
+    }
+    else{
+        if(num2>num3){
+            greatest = num2;
+
+        }
+        else{
+            if(num3>num1)
+            {
+                greatest = num3;
+            }
+            else{
+                greatest = num1;
+            }
+        }
+    }
+
+    cout<<greatest;
     
 
     return 0;
