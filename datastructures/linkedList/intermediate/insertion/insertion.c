@@ -20,7 +20,7 @@ int main(int argv, char *argc[])
         scanf("%d", &choice);
 
         newNode = (struct node *)malloc(sizeof(struct node));
-        printf("\nData:");
+        printf("Data:");
         scanf("%d", newNode->data);
 
         newNode->next = 0;
@@ -52,22 +52,16 @@ int main(int argv, char *argc[])
 
     temp = newNode;
 
-    temp->next = 0;
+    printf("Node inserted at the end successfully!");
 
 
 
-    temp = head;
-    printf("\nNodes are as given below:\n");
-    while (temp != 0)
-    {
 
-        printf(" | %d | %x | ", temp->data, &temp->next);
-        temp = temp->next;
-        if (temp != 0)
-        {
-            printf("    ----->    ");
-        }
-    }
+  
+
+
+  
+
 
     return 0;
 }
