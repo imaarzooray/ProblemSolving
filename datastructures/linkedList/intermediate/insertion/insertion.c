@@ -7,40 +7,67 @@ struct node
     struct node *next;
 };
 
-
 int main(int argv, char *argc[])
 {
 
     struct node *newNode, *head, *temp;
-    head = NULL;
-    
+    head = 0;
+
     int choice;
-    while(choice)
+    while (choice)
     {
         printf("Choice - Continue(1) or Exit(0): ");
-        scanf("%d",&choice);
-        
+        scanf("%d", &choice);
+
         newNode = (struct node *)malloc(sizeof(struct node));
         printf("\nData:");
-        scanf("%d",newNode->data);
+        scanf("%d", newNode->data);
 
         newNode->next = 0;
 
-        if(head==NULL)
+        if (head == NULL)
         {
 
             head = newNode;
             temp = newNode;
         }
-        else{
+        else
+        {
 
             temp->next = newNode;
             temp = newNode;
         }
-    
     }
 
-    
+    printf("\nWant to insert node: ");
+    int choose;
+    scanf("%d", &choose);
+
+    newNode = (struct node *)malloc(sizeof(struct node));
+
+    printf("Data: ");
+    scanf("%d", newNode->data);
+
+    temp->next = newNode;
+
+    temp = newNode;
+
+    temp->next = 0;
+
+
+
+    temp = head;
+    printf("\nNodes are as given below:\n");
+    while (temp != 0)
+    {
+
+        printf(" | %d | %x | ", temp->data, &temp->next);
+        temp = temp->next;
+        if (temp != 0)
+        {
+            printf("    ----->    ");
+        }
+    }
 
     return 0;
 }
