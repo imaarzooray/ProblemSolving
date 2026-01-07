@@ -38,7 +38,7 @@ int main(int argv, char *argc[])
 
     int result = fibbo(counter) + fibbo(counter-1);
 
-    cout<<result;
+    cout<<"The sum of "<<counter<<" terms is: "<<result;
 
 
 
