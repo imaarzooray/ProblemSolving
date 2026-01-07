@@ -28,7 +28,11 @@ int main(int argv, char *argc[])
 
     int result = 0;
 
-    result = fibbo(5);
+    int counter;
+    printf("Enter the counter value: ");
+    scanf("%d",&counter);
+
+    result =fibbo(counter) + fibbo(counter-1); 
 
     printf("%d",result);
 
