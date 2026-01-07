@@ -5,8 +5,11 @@ using namespace std;
 //global variable
 int sum;
 
+static int count;
+
 int fibbo(int n)
 {
+    count = count + 1;
     if(n<0){
         cout<<"Invalid Input!";
     }
@@ -39,6 +42,8 @@ int main(int argv, char *argc[])
     int result = fibbo(counter) + fibbo(counter-1);
 
     cout<<"The sum of "<<counter<<" terms is: "<<result;
+
+    cout<<"\nRecursive function is called "<<count<<" times!";
 
 
 
