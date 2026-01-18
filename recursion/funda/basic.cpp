@@ -6,7 +6,8 @@ using namespace std;
 
 int printer(int lowerRange, int upperRange )
 {
-    if(lowerRange==10){
+    // Base Case
+    if(lowerRange==upperRange){
         return lowerRange;
     }
 
@@ -14,16 +15,14 @@ int printer(int lowerRange, int upperRange )
 
     lowerRange++;
 
-    printer(lowerRange=lowerRange, upperRange);
+    // calling the function
+    printer(lowerRange , upperRange);
 }
 
 int main(int argv, char *argc[])
 {
 
-
-    printer(0,10);
-
-
+    printer(0,100);
 
     return 0;
 }
