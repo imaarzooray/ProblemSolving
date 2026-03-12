@@ -15,7 +15,7 @@ int main()
     cin >> post;
 
     int elem;
-
+ 
     if(post>maxSize){
         cout<<"Overflow Condition!";
     }
@@ -27,5 +27,14 @@ int main()
         cout<<elem<< " inserted at position "<<post<<" Successfully!";
 
     }
+
+    // print the array
+
+    for(int i=0;i<size-1;i++){
+        cout<<arr[i]<<", ";
+    }
+
+
+    
     return 0;
 }
