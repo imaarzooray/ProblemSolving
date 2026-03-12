@@ -7,6 +7,7 @@ int main(){
 
     int arr[10] = {20,3,0,-10,32};
 
+    
     int arrSize = sizeof(arr)/sizeof(int);
 
     cout<<"Enter the position of the element to insert: ";
@@ -22,12 +23,9 @@ int main(){
             int elem;
             cin>>elem;
         
-            // shift the array
-        
-        
+            // shift the array - time complexity is O(n)
             for(int i=arrSize-1;i>=pos;i--){
                 arr[i] = arr[i-1];
-         
             }
         
             arr[pos-1] = elem;
