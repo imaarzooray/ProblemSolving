@@ -25,25 +25,28 @@ int main()
     cout << "\nEnter the position from which you want to delete the data:";
     cin >> delPos;
 
-    int deletedValue;
-    for (int i = delPos - 1; i < size - 1; i++)
+    if (delPos <= size)
     {
-        if (i == delPos - 1)
+    
+        for (int i = delPos - 1; i < size - 1; i++)
         {
-            deletedValue = arr[i];
+           
+
+            arr[i] = arr[i + 1];
         }
 
-        arr[i]=arr[i+1];
+        size--;
+
+        for (int i = 0; i < size; i++)
+        {
+            cout << arr[i] << " ";
+        }
+
+        cout << "The deleted value is: " << arr[delPos-1];
+    }
+    else{
+        cout<<"Invalid Position!";
     }
 
-    size--;
-
-    
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    cout<<"The deleted value is: "<<deletedValue;
     return 0;
 }
